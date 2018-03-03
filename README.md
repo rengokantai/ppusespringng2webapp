@@ -17,3 +17,22 @@ Route Guards
 
 ```
 ng new app --routing
+
+
+### Observable
+Subject
+- Subject is a special type of Observable that multicast values to many Observers and can subscribe to other observables
+
+```
+import {Observable} from 'rxjs/Observable';
+import {Subject} from 'rxjs/Subject';
+const observableOne = new Observable(observer=>{observer.next(Math.random());
+observableOne.subscribe(value=>console.log('',value));
+
+const observableTwo = new Observable(observer=>{observer.next(Math.random());
+const subject = new Subject();
+subject.subscribe(value=>console.log(value));
+subject.next("xx")
+observableTwo.subscribe(subject);
+```
+
