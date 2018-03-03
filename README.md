@@ -17,7 +17,7 @@ Route Guards
 
 ```
 ng new app --routing
-
+```
 
 ### Observable
 Subject
